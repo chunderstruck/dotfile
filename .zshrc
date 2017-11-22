@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/dchun/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -101,5 +101,15 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
+# ZSH Settings
+bindkey -v
+setopt hist_ignore_dups
+setopt nobeep
+setopt noflowcontrol
 
-[ -s "/Users/dwchun/.k/kvm/kvm.sh" ] && . "/Users/dwchun/.k/kvm/kvm.sh" # Load kvm
+# Completion
+autoload -U compinit promptinit
+compinit
+promptinit
+
+
